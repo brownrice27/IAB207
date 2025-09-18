@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Decks - Home</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="static/style/styles.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="static/img/logo.png" alt="Open Decks Logo"> Open Decks
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="create.html">Create Event</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking-history.html">Booking History</a></li>
+      </ul>
+      <button class="btn btn-outline-light">Sign Up</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="static/img/slide1.jpg" class="d-block w-100" alt="Slide 1">
+      </div>
+      <div class="carousel-item">
+        <img src="static/img/slide2.jpg" class="d-block w-100" alt="Slide 2">
+      </div>
+      <div class="carousel-item">
+        <img src="static/img/slide3.png" class="d-block w-100" alt="Slide 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <div class="hero-text">
+    <h1>Open Decks</h1>
+    <p>Discover and create collaborative music gigs</p>
+    <a href="create.html" class="btn btn-outline-light">Create Event</a>
+  </div>
+</section>
+
+<!-- Upcoming Events -->
+<section class="events-list">
+  <div class="container">
+    <h2>Upcoming Events</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="static/img/indie.jpg" class="card-img-top" alt="Indie Night">
+          <div class="card-body">
+            <h5 class="card-title">Indie Night</h5>
+            <span class="badge bg-success mb-2">Open</span>
+            <p class="card-text">20 Sept 2025 | 7:00 PM - 11:00 PM</p>
+            <a href="events.html" class="btn btn-outline-light w-100">View Event</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="static/img/slide2.jpg" class="card-img-top" alt="Electronic Vibes">
+          <div class="card-body">
+            <h5 class="card-title">Electronic Vibes</h5>
+            <span class="badge bg-success mb-2">Open</span>
+            <p class="card-text">25 Sept 2025 | 8:00 PM - 12:00 AM</p>
+            <a href="event-details.html" class="btn btn-outline-light w-100">View Event</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="static/img/slide3.png" class="card-img-top" alt="Jazz & Blues">
+          <div class="card-body">
+            <h5 class="card-title">Jazz & Blues Night</h5>
+            <span class="badge bg-warning text-dark mb-2">Limited</span>
+            <p class="card-text">28 Sept 2025 | 7:30 PM - 11:30 PM</p>
+            <a href="event-details.html" class="btn btn-outline-light w-100">View Event</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Event Categories -->
+<section class="categories">
+  <div class="container">
+    <h2>Explore Event Categories</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-3"><div class="card p-3"><h5 class="card-title">Morning Sessions</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5 class="card-title">Electronic Music</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5 class="card-title">Indie Night</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5 class="card-title">Jazz & Blues</h5></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-center text-white py-4 mt-5">
+  <div class="container">
+    <h5 class="mb-2">What is Open Decks?</h5>
+    <p class="mb-3">Open Decks is a collaborative platform for music lovers and performers. We bring together DJs, artists, and fans to create, share, and enjoy live events.</p>
+    <hr class="border-secondary" style="max-width: 400px; margin: 15px auto;">
+    <p class="mb-0">&copy; 2025 Open Decks. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

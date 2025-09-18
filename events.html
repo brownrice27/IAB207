@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Decks - Event Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/style/styles.css">
+</head>
+<body class="bg-dark text-white">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="static/img/logo.png" alt="Open Decks Logo">
+        Open Decks
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="create.html">Create Event</a></li>
+          <li class="nav-item"><a class="nav-link" href="booking-history.html">Booking History</a></li>
+        </ul>
+        <button class="btn btn-outline-light">Sign Up</button>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <!-- Event Hero -->
+  <section class="py-5 text-center bg-black">
+    <div class="container">
+      <h1>Indie Night at Open Decks</h1>
+      <p class="lead">Join us for a night of amazing indie performances!</p>
+    </div>
+  </section>
+
+  <!-- Event Details -->
+  <section class="event-details py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <img src="static/img/indie.jpg" alt="Event Image" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+          <h2>Event Information</h2>
+          <ul class="list-unstyled mb-4">
+            <li><strong>Date:</strong> 20 September 2025</li>
+            <li><strong>Time:</strong> 7:00 PM – 11:00 PM</li>
+            <li><strong>Location:</strong> Open Decks Venue, Brisbane</li>
+          </ul>
+          <p>Experience the best indie music with talented musicians from around the city.</p>
+
+          <h3 class="mt-4">Book Tickets</h3>
+          <form id="ticketForm">
+            <div class="mb-3">
+              <label for="ticketType" class="form-label">Ticket Type</label>
+              <select class="form-select" id="ticketType" required>
+                <option value="general">General Admission</option>
+                <option value="vip">VIP</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="fullName" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="numTickets" class="form-label">Number of Tickets</label>
+              <input type="number" class="form-control" id="numTickets" value="1" min="1" required>
+            </div>
+            <button type="button" class="btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#confirmationModal">Book Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Confirmation Modal -->
+  <div class="modal fade" id="confirmationModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title">Booking Confirmation</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Thank you for booking your tickets! Your reservation has been received.</p>
+          <ul class="list-unstyled">
+            <li><strong>Name:</strong> <span id="confirmName"></span></li>
+            <li><strong>Email:</strong> <span id="confirmEmail"></span></li>
+            <li><strong>Ticket Type:</strong> <span id="confirmType"></span></li>
+            <li><strong>Tickets:</strong> <span id="confirmTickets"></span></li>
+          </ul>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comments Section -->
+  <section class="event-comments py-5 bg-black">
+    <div class="container">
+      <h3 class="mb-4">Comments</h3>
+      <div class="comment mb-3 p-3 bg-secondary rounded">
+        <strong>John Doe:</strong> Loved this event!<br>
+        <small class="text-light">Posted: 15 Aug 2025</small>
+      </div>
+      <form id="commentForm">
+        <textarea class="form-control mb-2" rows="3" placeholder="Add a comment" required></textarea>
+        <button type="submit" class="btn btn-outline-light">Post Comment</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-center text-white py-4 mt-5">
+    <div class="container">
+      <h5 class="mb-2">What is Open Decks?</h5>
+      <p class="mb-3">
+        Open Decks is a collaborative platform for music lovers and performers. 
+        We bring together DJs, artists, and fans to create, share, and enjoy live events. 
+        From indie nights to electronic showcases, we help communities connect through music.
+      </p>
+      <hr class="border-secondary" style="max-width: 400px; margin: 15px auto;">
+      <p class="mb-0">&copy; 2025 Open Decks. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Handle ticket confirmation
+    const confirmName = document.getElementById('confirmName');
+    const confirmEmail = document.getElementById('confirmEmail');
+    const confirmType = document.getElementById('confirmType');
+    const confirmTickets = document.getElementById('confirmTickets');
+
+    document.querySelector('button[data-bs-target="#confirmationModal"]').addEventListener('click', () => {
+      confirmName.textContent = document.getElementById('fullName').value;
+      confirmEmail.textContent = document.getElementById('email').value;
+      confirmType.textContent = document.getElementById('ticketType').value;
+      confirmTickets.textContent = document.getElementById('numTickets').value;
+    });
+
+    // Handle comments
+    document.getElementById('commentForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert("Comment posted (frontend only)!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
